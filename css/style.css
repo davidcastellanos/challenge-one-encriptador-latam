@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F3F5FC;
+}
+
+main {
+    width: 1150px;
+    margin: 0 auto;
+    background-color: darkslategray; /*MAIN, COLOR #F3F5FC*/
+    display: flex;
+    justify-content: space-around;
+}
+
+section {
+    height: 500px;
+}
+
+.input-section {
+    width: 63%;
+    
+}
+
+
+.mensaje {
+    padding: 2em 2em;
+    border: 0.5px dotted #5c69ad;
+    width: 100%;
+    height: 450px;
+    margin-top: 5%;
+    resize: none;
+    outline: none;
+    background-color: #ebeef7;
+    border-radius: 2.5%;
+}
+
+.encrypt-buttons {
+    margin: -2em 12em;
+    position: absolute;
+
+}
+
+.btn-encrypt, .btn-decrypt {
+    width: 150px;
+    padding: 4px;
+    margin-left: 1em;
+}
+
+.result-section {
+    width: 22%;
+}
+
+
+.card {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 8px 4px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 3%;
+    margin: 0 0 0 0;
+    width: 100%;
+    height: 450px;
+    margin-top: 13.5%;
+  }
+  
+  .card:hover {
+    box-shadow: 10px 8px 13px 5px rgba(0,0,0,0.5);
+  }
+  
+  .card img.avatar {
+    display: block;
+    margin: 0 auto;
+    /*background-color: aqua;*/
+    border-radius: 3% 3% 0 0;
+    width: 220px;
+    
+  }
+
+
+  h4 {
+    font-size: 18px;
+    max-width: 80%;
+    margin: 0 auto;
+    font-weight: bold;
+    text-align: center;
+    padding: 2px 2px;
+    /* background-color: green; */
+  }
+  
+  .container {
+    padding: 8px 10px 0px 10px;
+    border-radius: 0 0 5% 5%;
+    height: 10em;
+    font-size: 15px;
+  }
+
+  .copy-button {
+    width: 150px;
+    margin: 0px 50px 20px 50px;
+    padding: 4px;
+  }
+
+
+  @media only screen and (max-width: 1150px) {
+
+    main {
+        width: 100%;
+    }
+
+    .input-section, .result-section{
+        /* display: block; */
+        width: 40%;
+        
+    }
+
+    .card {
+        margin-top: 5.5%;
+    }
+
+    .encrypt-buttons {
+
+        margin: -2em -0.4em;
+    
+    }
+
+    .btn-encrypt, .btn-decrypt {
+        width: 138px;
+        padding: 4px;
+        margin-left: 1em;
+    }
+    
+
+    .copy-button {
+        margin: 0 0;
+        width: 100%;
+    }
+
+     
+    
+  }
+
+
+  @media only screen and (max-width: 750px) {
+    main {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .input-section, .result-section{
+        /* display: block; */
+        width: 100%;
+        
+    }
+
+    .encrypt-buttons {
+
+        margin: -2em 4.6em;
+    
+    }
+
+    .copy-button {
+        margin: 0 0;
+        width: 100%;
+    }
+
+     
+    
+  }
+
+  @media only screen and (max-width: 480px) { 
+    .encrypt-buttons {
+        margin: -2em 0.8em;
+    }
+  }
+  
+
+
+  @media only screen and (max-width: 350px) {
+
+    .encrypt-buttons {
+        margin: -2em -0.4em;
+    
+    }
+
+    .btn-encrypt, .btn-decrypt {
+        width: 130px;
+        padding: 4px;
+        margin-left: 1em;
+    }
+    
+
+  }
