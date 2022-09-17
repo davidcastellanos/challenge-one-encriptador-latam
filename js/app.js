@@ -7,6 +7,13 @@ const clearValue = () => {
 const copyText = () => {
     let btn = document.getElementById('btn-copy');
     let clipboard = new ClipboardJS(btn);
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'El texto se ha copiado exitosamente!',
+        showConfirmButton: false,
+        timer: 1500
+      })
 
 }
 
@@ -29,7 +36,11 @@ const getValueEncrypt = () => {
     let inputValue = document.getElementById("mensaje").value; 
 
     if (inputValue === "") {
-        alert("Debe escribir un texto válido!");
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debe escribir un texto válido!',
+          })
 
     } else {
         document.getElementById("tituloSalida").innerHTML = "resultado:";
@@ -58,7 +69,12 @@ const getValueDecrypt = () => {
     let inputValue = document.getElementById("mensaje").value; 
 
     if (inputValue === "") {
-        alert("Debe escribir un texto válido!")        
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Debe escribir un texto válido!',
+          })
+   
     } else {
         document.getElementById("tituloSalida").innerHTML = "resultado:";
     
