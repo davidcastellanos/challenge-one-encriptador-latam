@@ -11,6 +11,7 @@
     <title>Encriptador de Texto con JS</title>
 </head>
 <body>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
     <header>
         <nav>
             <a href="./index.html">
@@ -18,49 +19,52 @@
                 <img src="./src/img/logo-oracle.svg" alt="logo de la web desencriptador" />
               </h1>
             </a>
+            <h2>Encriptador de mensajes</h2>
           </nav>
     </header>
     <main>
         <section class="input-section">
             <form action="">
-                <textarea placeholder="¡Escribe el mensaje que deseas encriptar o desencriptar!" class="mensaje" type="text" name="" id=""></textarea>
+                <textarea placeholder="¡Escribe el mensaje que deseas encriptar o desencriptar!" class="mensaje" type="text" name="" id="mensaje"></textarea>
                 <div class="encrypt-buttons">
-                    <input class="btn-encrypt" type="submit" value="sadsdsadsasd">
-                    <input class="btn-decrypt" type="submit" value="sadsdsadsasd">
+                  <p>&#x2764; también se admiten acentos</p>
+                    <button id="encriptar" class="btn-encrypt" type="button" onclick="getValueEncrypt()">ENCRIPTAR</button>
+                    <button id="desencriptar" class="btn-decrypt" type="button" onclick="getValueDecrypt()">DESENCRIPTAR</button>
                 </div>
-
             </form>
         </section>
 
         <section class="result-section">
-            <form class="card">
+            <form id="card" class="card">
                 <img class="avatar" src="./src/img/img_avatar2.png" alt="Avatar">
-                <h4>Ningún mensaje fue encontrado</h4> 
+                <h4 id="tituloSalida">Ningún mensaje fue encontrado</h4> 
                 <div class="container">
-                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium commodi dolor quas quisquam minus eaque, voluptas repudiandae reprehenderit optio ducimus aperiam. Consequatur animi velit a reiciendis facilis totam saepe distinctio.</p> 
+                  <p id="msjSalida">Ingresa el texto que desees encriptar o desencriptar.</p> 
                 </div>
-                <input class="copy-button" type="submit" value="sadsdsadsasd">
+                <button id="btn-copy" class="btn-copy" type="button" data-clipboard-target="#msjSalida" onclick="copyText()"> COPIAR TEXTO</button>
               </form>
         </section>
     </main>
     <footer>
         <div class="footer-content">
-            <h3>Foolish Developer</h3>
-            <p>Foolish Developer is a blog website where you will find great tutorials on web design and development.</p>
+            <h3>Challenge One Encriptador</h3>
+            <p>Encriptador y desencriptador de mensajes desarrollado usando JavaScript, CSS y HTML</p>
         </div>
         <div class="footer-bottom">
-            <p>copyright &copy;2022 <a href="#">David Castellanos</a>  </p>
+            <p>copyright &copy;2022 <a href="https://www.linkedin.com/in/davidcastellanosp/">David Castellanos</a>  </p>
             <div class="footer-menu">
               <ul class="f-menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
-                <li><a href="">Blog</a></li>
+                <li><a href="https://github.com/davidcastellanos">GitHub</a></li>
+                <li><a href="https://gitlab.com/davidcastellanos">Gitlab</a></li>
+                <li><a href="https://www.linkedin.com/in/davidcastellanosp/">LinkedIn</a></li>
+                <li><a href="https://twitter.com/davcastellanosp">Twitter</a></li>
               </ul>
             </div>
         </div>
 
     </footer>
+    <!-- <script src="./js/clearData.js"></script> -->
+    
     <script src="./js/app.js"></script>
 </body>
 </html>

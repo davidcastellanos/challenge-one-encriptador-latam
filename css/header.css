@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
 .logo img {
@@ -9,6 +12,45 @@
     margin-bottom: 3em;
 }
 
-@media only screen and (max-width: 600px) {
-    
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    color: #868E96;
+    margin: auto 0;
+    margin-right: 10%;
+    margin-bottom: 8%;
+}
+
+@media only screen and (max-width: 750px) {
+
+    nav h2 {
+    margin-bottom: 12%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    nav { 
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+
+    h1 {
+        margin: 0 30%;
+    }
+
+    nav h2 {
+        font-size: 1.5rem;
+        width: 100%;
+        margin: 0 16%;
+    }
 }
